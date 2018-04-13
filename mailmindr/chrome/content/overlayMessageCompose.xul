@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://mailmindr/locale/mailmindr.message.compose.dtd">
+
+<overlay id="mailmindrMessageComposeOverlay"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle 
+            id="mailmindrPromptStrings"        
+            src="chrome://mailmindr/locale/mailmindr.message.compose.overlay.properties"/>
+    </stringbundleset>
+	
+	<script type="application/x-javascript" src="chrome://mailmindr/content/controls/timespanPicker.js" />
+	<script type="application/x-javascript" src="chrome://mailmindr/content/controls/actionPicker.js" />
+	
+	<script type="application/x-javascript" src="chrome://mailmindr/content/overlayMessageCompose.js" />
+
+	<!-- msgheaderstoolbar-box -->
+	<toolbox id="headers-box">
+		<toolbar id="mailmindrComposer"
+			insertafter="MsgHeadersToolbar"
+			flex="1"
+			tbalign="stretch"
+			style="-moz-appearance: none;">
+			<hbox align="center">
+				<hbox pack="end" align="center" style="width: 11em;">
+					<label value="&mailmindr.message.compose.title;" />			
+				</hbox>
+                <hbox>
+				
+					<menulist id="mailmindrMessageComposeTimespans">
+						<menupopup>
+							<menuitem label="&mailmindr.message.compose.interval;" />
+						</menupopup>
+					</menulist>
+					
+					<hbox
+						align="baseline"
+						id="mailmindrMessageComposeGroupSetDateTime" hidden="false">
+						
+						<label value="&mailmindr.message.compose.remind.at;" />
+						<datepicker
+							type="popup"
+							id="mailmindrMessageComposeDatePicker"
+							/>
+						<label value="&mailmindr.message.compose.remind.at.spacer;" />
+						<timepicker
+							id="mailmindrMessageComposeTimePicker"
+							hideseconds="true"
+							/>
+					</hbox>
+					
+					<separator orient="vertical" />
+					
+					<hbox id="mailmindrMessageComposeGroupSetAction" align="baseline">
+						<label
+							value="&mailmindr.message.compose.doAction;"/>
+						
+						<menulist id="mailmindrMessageComposeActions">
+							<menupopup>
+								<menuitem label="mailmindr.action" />
+							</menupopup>
+						</menulist>
+					</hbox>
+                </hbox>
+			</hbox>
+		</toolbar>
+	</toolbox>
+
+    <window id="msgcomposeWindow">
+        <hbox id="mailmindrMessageComposeNotification" insertbefore="status-bar" hidden="true">
+            <label id="mailmindrMessageComposeNotificationText" value=""/>
+        </hbox>
+    </window>
+	
+</overlay>

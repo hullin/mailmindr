@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>mailmindr@arndissler.net</em:id>
+        <em:name>mailmindr</em:name>
+        <em:iconURL>chrome://mailmindr/content/images/64x64/mailmindr.png</em:iconURL>
+        <em:version>0.7.9.4</em:version>
+        <em:description></em:description>
+        <em:creator>Arnd Issler</em:creator>
+        <em:homepageURL>http://mailmindr.net/</em:homepageURL>
+        <em:optionsURL>chrome://mailmindr/content/preferences/preferences.xul</em:optionsURL>
+        <!-- type=extension --> 
+        <em:type>2</em:type> 
+        <em:targetApplication>
+            <Description>
+                <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+                <!-- thunderbird -->
+                <em:minVersion>20.0</em:minVersion>
+                <em:maxVersion>49.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+
+        <em:targetApplication>
+            <Description>
+                <em:id>postbox@postbox-inc.com</em:id>
+                <!-- Postbox -->
+                <em:minVersion>3.0</em:minVersion>
+                <em:maxVersion>3.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+    </Description>
+</RDF>

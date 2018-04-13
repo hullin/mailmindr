@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="chrome://mailmindr/skin/overlay.css" ?>
+
+<!DOCTYPE overlay SYSTEM "chrome://mailmindr/locale/mailmindr.toolbar.dtd">
+
+<overlay
+	id="mailmindrToolbarOverlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<toolbarpalette
+		id="MailToolbarPalette">
+		<toolbarbutton id="mailmindrButtonToggleMindr" />
+	</toolbarpalette>
+	
+	<toolbarbutton
+		id="mailmindrButtonPostpone"
+		command="mailmindrCmdPostpone"
+		label="&mailmindr.toolbar.postpone;"
+		class="toolbarbutton-1 chromeclass-toolbar-additional custombutton"
+		/>
+		
+	<toolbarbutton
+		id="mailmindrButtonToggleMindr"
+		command="mailmindrCmdToggleMindr"
+		label="&mailmindr.toolbar.togglemindr;"
+		disabled="true" 
+		class="toolbarbutton-1 chromeclass-toolbar-additional custombutton"
+		/>
+
+
+
+
+
+
+    <toolbarpalette
+        id="header-view-toolbar-palette">
+        <toolbarbutton id="mailmindrMailHeaderButtonToggleMindr" />
+    </toolbarpalette>
+
+    <toolbarbutton
+        id="mailmindrMailHeaderButtonToggleMindr"
+        command="mailmindrCmdToggleMindrFromMailHeader"
+        label="&mailmindr.toolbar.togglemindr;"
+        class="toolbarbutton-1 msgHeaderView-button"
+        />
+		
+</overlay>

@@ -1,0 +1,14 @@
+content     mailmindr		chrome/content/    
+skin    	mailmindr 		classic/1.0 		chrome/skin/classic/
+
+overlay     chrome://messenger/content/messenger.xul            				chrome://mailmindr/content/overlay.xul
+overlay     chrome://messenger/content/messengercompose/messengercompose.xul	chrome://mailmindr/content/overlayMessageCompose.xul
+# overlay     chrome://messenger/content/preferences/preferences.xul              chrome://mailmindr/content/preferences/overlayPreferences.xul
+# overlay 	chrome://messenger/content/messenger.xul 							chrome://mailmindr/content/overlayMailmindrColumn.xul
+
+locale		mailmindr		en					chrome/locale/en/
+locale	    mailmindr		de-DE				chrome/locale/de-DE/
+			 
+style    	chrome://mailmindr/content/overlay.xul 					chrome://mailmindr/skin/overlay.css
+style    	chrome://mailmindr/content/overlayMessageCompose.xul 	chrome://mailmindr/skin/messengercompose/overlayMessageCompose.css
+style    	chrome://mailmindr/content/mailmindr.toolbar.xul 		chrome://mailmindr/skin/overlay.css

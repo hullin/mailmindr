@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<overlay id="sample"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <tree id="threadTree">
+    <treecols id="threadCols">
+    <splitter class="tree-splitter" />
+    <treecol id="colMailmindrSet" persist="hidden ordinal width" 
+           currentView="unthreaded" flex="2"
+           label="Wiedervorlage" tooltiptext="Click to sort by the Reply-To header" />
+    </treecols>
+  </tree>
+  
+  <!-- include our javascript file -->
+  <script type="text/javascript" src="chrome://mailindr/content/overlayMailmindrColumn.js"/> 
+</overlay>
